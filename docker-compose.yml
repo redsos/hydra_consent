@@ -45,7 +45,7 @@ services:
       MYSQL_ROOT_PASSWORD: secret
 
   hydra:
-    image: oryd/hydra:v1.0.0-beta.9-alpine
+    image: oryd/hydra:v1.0.0-rc.7_oryOS.10
     ports:
       - "9000:4444"
       - "4445:4445"

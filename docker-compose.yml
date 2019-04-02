@@ -13,8 +13,8 @@ services:
       - db
       - identity_provider
     environment:
-      - HYDRA_AUTH_URL=http://{PUBLIC_IP}:9000/oauth2/auth?client_id=local-app&response_type=code&state=72582c142d403a972b579f05140bf93f&nonce=gyukgyglgghjjkk&redirect_uri=http://{PUBLIC_IP}:3000/sessions/callback&scope=openid+offline
-      - CLIENT_ID=local-app
+      - HYDRA_AUTH_URL="http://tokyo:9000/oauth2/auth?client_id=tokyo&response_type=code&state=72582c142d403a972b579f05140bf93f&nonce=gyukgyglgghjjkk&redirect_uri=http://tokyo:3000/sessions/callback&scope=openid+offline
+      - CLIENT_ID=tokyo
       - CLIENT_SECRET=secret
       - AUTH_STATE=72582c142d403a972b579f05140bf93f
       - DB_PASSWORD=secret
@@ -52,10 +52,10 @@ services:
     command:
       serve all --dangerous-force-http
     environment:
-      - ISSUER=http://{PUBLIC_IP}:9000
-      - OAUTH2_ISSUER_URL=http://{PUBLIC_IP}:9000
-      - OAUTH2_CONSENT_URL=http://{PUBLIC_IP}:4000/consent
-      - OAUTH2_LOGIN_URL=http://{PUBLIC_IP}:4000/login
+      - ISSUER=http://tokyo:9000
+      - OAUTH2_ISSUER_URL=http://tokyo:9000
+      - OAUTH2_CONSENT_URL=http://tokyo:4000/consent
+      - OAUTH2_LOGIN_URL=http://tokyo:4000/login
       - SYSTEM_SECRET=YSwy2MAEt7gALtW~uJC3x_3mWZ_CNRC0
       - OAUTH2_SHARE_ERROR_DEBUG=1
       - DATABASE_URL=memory

@@ -1,6 +1,7 @@
 class HydraService
   include HTTParty
-  base_uri ENV.fetch('HYDRA_URL')
+  # base_uri ENV.fetch('HYDRA_URL')
+  base_uri ENV.fetch('HYDRA_ADMIN_URL', 'http://hydra:4445')
 
   def getLoginRequest(challenge)
     get('login', challenge)

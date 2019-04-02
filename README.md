@@ -15,3 +15,8 @@ docker exec -it hydraconsent_db_1 mysql -uroot -psecret -e"CREATE DATABASE ident
 # need install hydra
 ./create_client.sh
 ```
+
+#### Open
+```
+open tokyo.localhost:3000
+```
